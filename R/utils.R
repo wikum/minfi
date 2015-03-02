@@ -60,9 +60,9 @@ ilogit2 <- function(x) { 2^(x) / (1+2^(x)) }
 
 .getAnnotationString <- function(annotation) {
     if(length(annotation) == 1)
-        return(sprintf("%sanno", annotation))
+        return(sprintf("%s", annotation))
     if(all(c("array", "annotation") %in% names(annotation)))
-        return(sprintf("%sanno.%s", annotation["array"], annotation["annotation"]))
+        return(sprintf("%s.%s", annotation["array"], annotation["annotation"]))
     stop("unable to get the annotation string for this object")
 }
 
